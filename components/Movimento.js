@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import { useState, useEffect } from 'react';
 import { DeviceMotion } from 'expo-sensors';
 import Estilos from '../styles/Estilos';
@@ -28,16 +28,23 @@ export default function Movimento() {
       else {
         setStatus("Parado");
       }
-    })
+    });
 
     return () => {
       subscription?.remove();
-    }
+    };
   }, []);
 
   return (
-    <View style={Estilos.container}>
-      <Text style={Estilos.textoMovimento}>{status}</Text>
-    </View>
+    <SafeAreaView style={Estilos.container}>
+      <View style={Estilos.card}>
+        <Text style={Estilos.title}>Movimento</Text>
+        <Text style={Estilos.subtitle}>Acompanhe a sua atividade física diária</Text>
+        
+        <View style={Estilos.metricContainer}>
+          <Text style={Estilos.metricValue}>{status}</Text>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 }

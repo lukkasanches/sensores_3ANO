@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Movimento from './components/Movimento';
@@ -11,28 +10,29 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen name="Movimento" component={Movimento}
-                    options={{
-                      tabBarIcon: ({ color, size }) => (
-                        <Ionicons
-                          name="walk-outline"
-                          size={size}
-                          color={color}
-                        />
-                      )
-                    }}
+      <Tab.Navigator 
+        screenOptions={{ 
+          headerShown: false,
+          tabBarStyle: Estilos.tabBar 
+        }}
+      >
+        <Tab.Screen 
+          name="Movimento" 
+          component={Movimento}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="walk-outline" size={size} color={color} />
+            )
+          }}
         />
-        <Tab.Screen name="Contador de Passos" component={Pedometro}
-                    options={{
-                      tabBarIcon: ({ color, size }) => (
-                        <Ionicons
-                          name="footsteps-outline"
-                          size={size}
-                          color={color}
-                        />
-                      )
-                    }}
+        <Tab.Screen 
+          name="Contador de Passos" 
+          component={Pedometro}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="footsteps-outline" size={size} color={color} />
+            )
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>

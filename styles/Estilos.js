@@ -1,23 +1,6 @@
-import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-export default function Movimento() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.card}>
-        <Text style={styles.title}>Movimento</Text>
-        <Text style={styles.subtitle}>Acompanhe a sua atividade física diária</Text>
-        
-        <View style={styles.metricContainer}>
-          <Text style={styles.metricValue}>0.0</Text>
-          <Text style={styles.metricLabel}>m/s²</Text>
-        </View>
-      </View>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f4f6f8',
@@ -32,12 +15,10 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: 400,
     alignItems: 'center',
-    // Sombra para iOS
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
     shadowRadius: 10,
-    // Sombra para Android
     elevation: 5,
   },
   title: {
@@ -70,5 +51,9 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#0369a1',
     fontWeight: '600',
+  },
+  tabBar: {
+    backgroundColor: '#ffffff',
+    height: 60,
   },
 });
