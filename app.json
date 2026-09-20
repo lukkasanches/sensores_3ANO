@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/sensores.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/sensores.png",
       "resizeMode": "contain",
@@ -28,7 +28,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "45048d41-5082-4f8e-a26a-973fb899fc73"
+        
       }
     },
     "plugins": [
