@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/sensores.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/sensores.png",
       "resizeMode": "contain",
@@ -32,7 +32,8 @@
       }
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "expo-status-bar"
     ]
   }
 }

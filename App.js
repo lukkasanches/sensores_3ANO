@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Movimento from './components/Movimento';
 import Pedometro from './components/Pedometro';
-import Estilos from '../styles/Estilos';
+import Estilos from './styles/Estilos';
 import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
